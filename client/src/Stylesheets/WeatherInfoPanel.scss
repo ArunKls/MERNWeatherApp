@@ -1,0 +1,53 @@
+.weather-info {
+  display: grid;
+  gap: 0px; /* Adds space between grid items */
+  border: 1px;
+  .city-name {
+     text-decoration: underline;
+     align-self: center;
+     justify-self: center;
+  }
+ 
+  .overcast {
+     display: grid;
+     gap: 0px; /* Adds space between the image and description */
+ 
+     .overcast-img,
+     .overcast-description {
+       align-self: center;
+       justify-self: center;
+     }
+  }
+ 
+  .current-weather {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 0px; /* Adds space between the weather info items */
+ 
+     .humidity,
+     .curr-temp,
+     .feels-like {
+       align-self: center;
+       justify-self: center;
+     }
+ 
+     /* Add specific styles for the icons to ensure they have enough space */
+     .fa-solid,
+     .fa-regular {
+       margin-left: 5px; /* Adjusts the space between the text and the icon */
+     }
+  }
+ 
+  .temps {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px; /* Adds space between the temperature items */
+ 
+     .min-temp,
+     .max-temp {
+       align-self: center;
+       justify-self: center;
+     }
+  }
+ }
+ 

@@ -1,0 +1,28 @@
+.header {
+    text-align: center;
+    background: #222; // Dark background color
+    color: #9fd7e1; // Light text color for better contrast
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.annotation {
+    font-size: 12px;
+    color: #6c6c6c; // Light grey for annotation text to maintain contrast
+}
+
+a {
+    color: #e2e2e2; // Link color, a common blue for links in dark themes
+    text-decoration: none; // Removing underline for a cleaner look
+    &:hover {
+        color: #d2e8ff; // Darker blue on hover for better visibility
+    }
+}
+
+.portfolio-link, .github-link {
+    display: inline-block;
+    margin: 10px; // Adjust the margin as needed to increase space
+    i {
+        margin-right: 5px;
+    }
+}
