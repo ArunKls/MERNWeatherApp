@@ -6,6 +6,7 @@ import axios from 'axios';
 import { Form, Button, Row, Col } from "react-bootstrap";
 // Import custom styles
 import '../Stylesheets/WeatherCityForm.scss';
+require('dotenv').config({path: "./../../../.env"});
 
 // Define the WeatherCityForm component
 const WeatherCityForm = () => {
@@ -29,7 +30,7 @@ const WeatherCityForm = () => {
         try {
             // Make an API request to fetch weather data
             const response = await axios.get(
-                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric === 'metric' ? 'metric' : 'imperial'}&appid=42e7afe4477beb0e6a173bac36eb79bc`
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric === 'metric' ? 'metric' : 'imperial'}&appid=${process.env.WEATHER_KEY}`
             );
             // Update weatherData state with the fetched data
             setWeatherData(response.data);
